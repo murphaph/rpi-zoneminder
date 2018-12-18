@@ -2,14 +2,14 @@
 
 To run:
 ```
-docker run \
-   -d \
-   -e TZ="Europe/Amsterdam" \
-   --restart=always \
-   --privileged="true" \
-   -p 8080:80 \
-   --name zoneminder \
-   -v "/opt/zoneminder/config":"/config":rw \
-   -v "/opt/zoneminder/data":"/var/cache/zoneminder":rw \
-   koenkk/rpi-zoneminder
+docker run \	
+    -d \	
+    -e TZ="Europe/Berlin" \	
+    --restart=always \	
+    --privileged="true" \	
+    -p 8080:80 \	
+    --name zoneminder \	
+    -v "/media/zm/config":"/config":rw \	
+    -v "/media/zm/data":"/var/cache/zoneminder":rw \	
+    murphaph/rpi-zoneminder	
 ```
